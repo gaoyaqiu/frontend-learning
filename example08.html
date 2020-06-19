@@ -257,6 +257,7 @@
         }
         
         .box-bd ul li {
+            position: relative;
             float: left;
             width: 228px;
             height: 270px;
@@ -265,8 +266,14 @@
             margin-bottom: 15px;
         }
         
-        .box-bd ul li img {
+        .box-bd ul li>img {
             width: 100%;
+        }
+        
+        .box-bd ul li em {
+            position: absolute;
+            top: 4px;
+            right: -4px;
         }
         
         .box-bd ul li h4 {
@@ -440,6 +447,9 @@
     <div class="box-bd">
         <ul class="clearfix">
             <li>
+                <em>
+          <img src="images/08/hot.png" alt="">
+        </em>
                 <img src="images/08/pic.png" alt="">
                 <h4>ThinkPHP5.0博客系统实战</h4>
                 <div class="info">
