@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位的特殊特性</title>
+    <style>
+        span {
+            position: absolute;
+            top: 300px;
+            width: 200px;
+            height: 150px;
+            background-color: red;
+        }
+
+        /* 1. 行内元素添加绝对或者固定定位，可以直接设置高度和宽度
+        2. 块级元素添加绝对或者固定定位，如果不给宽度或高度，默认大小是内容的大小 */
+        div {
+            position: absolute;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <span>123</span>
+    <div>aaaa</div>
+</body>
+
+</html>
