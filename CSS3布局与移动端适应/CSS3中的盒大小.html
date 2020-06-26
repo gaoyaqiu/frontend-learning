@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3中的盒大小</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            /* 推荐对所有元素使用 box-sizing */
+            box-sizing: border-box;
+        }
+        
+        .box1 {
+            width: 300px;
+            height: 100px;
+            border: 1px solid darkgray;
+            background-color: red;
+            color: #fff;
+        }
+        
+        .box2 {
+            width: 300px;
+            height: 100px;
+            padding: 50px;
+            border: 1px solid darkgray;
+            background-color: blue;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 默认情况下，元素的宽度与高度计算方式如下：
+
+  width（宽） + padding（内边距） + border（边框） = 元素实际宽度 
+  height（高） + padding（内边距） + border（边框） = 元素的实际高度
+  
+  这就意味着我们在设置元素的width/height 时，元素真实展示的高度与宽度会更大。
+  
+  使用CSS3 box-sizing 属性
+  CSS3 box-sizing 属性在一个元素的width和height中包含padding（内边距）和border（边框）
+  如果在元素上设置了box-sizing：border-box；则padding（内边距）和border（边框）也包含在width和height中
+   -->
+    <div class="box1">我是宽300px、高100px的盒子</div>
+    <div class="box2">我也是宽300px、高100px的盒子</div>
+</body>
+
+</html>
