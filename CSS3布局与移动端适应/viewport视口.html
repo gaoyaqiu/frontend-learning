@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 
+    width： 控制viewport大小，可以指定具体的值（如500），可以可以为特殊值（如device-width）即
+    设置被宽度 
+    initial-scale：指定页面初始缩放比例，当为1时，表示既不放大，也不缩小
+    maximum-scale: 允许用户缩放的最大比例，如为3表示允许放大到初始页面的3倍
+    minimum-scale: 允许用户缩放到的最小比例
+    user-scalable: 是否允许用户手动缩放页面，no表示禁止，yes表示允许
+  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>viewport视口</title>
+    <style>
+        body {
+            font-family: "微软雅黑";
+            background: #222;
+            color: #eee;
+            margin: 20px auto;
+            padding: 0 20px;
+            max-width: 1024px;
+        }
+        
+        img {
+            /* 设置块级元素，一行显示 */
+            display: block;
+            border: 0;
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        #cred {
+            font-size: .7em;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>viewport</h1>
+    <p>移动设备中浏览器是把页面放在一个虚拟的"窗口"(viewport)中，通常这个虚拟的"窗口"比屏幕宽，这样 就不用把整个页面内容压缩到手机屏幕的窗口中，用户可以通过平移和缩放来看网页的不同部分。
+    </p>
+    <img src="../images/20/abcd.jpg" alt="">
+    <p id="cred">
+        <strong>Photo credit（CC）：</strong>Cia de Foto <a href="#">Flicker Creative Commons</a>
+    </p>
+</body>
+
+</html>
