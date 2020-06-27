@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1.0,user-scalable=0">
+    <title>flex布局</title>
+    <style>
+        p {
+            font-size: 20px;
+        }
+        
+        .content {
+            width: 100%;
+            height: 400px;
+            display: -webkit-flex;
+            background-color: gray;
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            /* justify-content: center; */
+            /* align-items: center; */
+        }
+        
+        .item {
+            width: 50px;
+            height: 100px;
+            color: #fff;
+            margin: 5px;
+            background-color: blue;
+            flex: 1;
+        }
+        
+        .item1 {
+            /* 设置子元素的排列顺序，越小优先级越高 */
+            order: 1;
+        }
+        
+        .item2 {
+            order: 3;
+        }
+        
+        .item3 {
+            order: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <p>flex学习：</p>
+    <div class="content">
+        <div class="item item1">item1</div>
+        <div class="item item2">item2</div>
+        <div class="item item3">item3</div>
+    </div>
+</body>
+
+</html>
