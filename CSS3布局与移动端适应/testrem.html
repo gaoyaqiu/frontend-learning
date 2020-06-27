@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testrem</title>
+    <style>
+        .box {
+            width: 10rem;
+            height: 10rem;
+            background-color: red;
+        }
+        
+        .text {
+            color: #fff;
+        }
+        /* 当屏幕小于等于360px时，大于等于321px，会使用该样式
+         1rem = 16px(chrome浏览器默认字体大小) 
+        如果全局设置了font-size大小，则不会在使用浏览器的默认设置
+         */
+        /* @media screen and (max-width: 360px) and (min-width: 321px) {
+            html {
+                font-size: 20px;
+            }
+        }
+        
+        @media screen and (max-width: 320px) {
+            html {
+                font-size: 24px;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p class="text">hello rem</p>
+    </div>
+    <script>
+        // 获取视窗宽度
+        let htmlWidth = document.documentElement.clientWidth ||
+            document.body.clientWidth;
+        console.log(htmlWidth);
+        let htmlDom = document.getElementsByTagName('html')[0];
+        htmlDom.style.fontSize = htmlWidth / 10 + 'px';
+    </script>
+</body>
+
+</html>
