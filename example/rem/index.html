@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no" />
+    <title>网易新闻列表</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        html {
+            background-color: #f8f8f8;
+        }
+        
+        .header {
+            width: 100%;
+            height: 40px;
+            background-color: red;
+            padding-left: 23px;
+        }
+        
+        .header-item {
+            float: left;
+            height: 40px;
+            font-size: 16px;
+            color: #ffcdce;
+            margin-right: 20px;
+            line-height: 40px;
+        }
+        
+        .header-item:nth-child(2) {
+            color: #fff;
+            font-size: 17px;
+        }
+        
+        .banner-content {
+            position: relative;
+        }
+        
+        .banner-content .banner {
+            width: 100%;
+            height: 190px;
+        }
+        
+        .banner-content .banner-title {
+            position: absolute;
+            left: 15px;
+            bottom: 15px;
+            font-size: 16px;
+            color: #fff;
+        }
+        
+        .news-content .news-item {
+            width: 100%;
+            height: 180px;
+            padding-left: 15px;
+            padding-right: 15px;
+            /* 因width设置了100%，又设置了padding，所以页面出现了左右滚动条，为了消除padding的影响，
+              通过box-sizing属性解决
+             */
+            box-sizing: border-box;
+        }
+        
+        .news-content .item-inner {
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        
+        .news-content .news-img {
+            float: left;
+            width: 190px;
+            height: 140px;
+            margin-top: 15px;
+            margin-right: 15px;
+            border: 1px solid red;
+        }
+        
+        .news-content .news-title {
+            color: #404040;
+            font-size: 18px;
+            /* padding-top: 16px; */
+            margin-top: 16px;
+        }
+        
+        .item-inner .time {
+            position: absolute;
+            left: 210px;
+            bottom: 25px;
+            font-size: 16px;
+            color: #888;
+        }
+        
+        .item-inner .num {
+            position: absolute;
+            /* right: 4px; */
+            left: 450px;
+            bottom: 25px;
+            font-size: 16px;
+            color: #888;
+        }
+        
+        .item-inner .num::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -40px;
+            /* bottom: -3px; */
+            top: -4px;
+            width: 43px;
+            height: 35px;
+            background-size: contain;
+            background: url(image/arr.png) no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <ul class="header-content">
+            <li class="header-item">推荐</li>
+            <li class="header-item">新闻</li>
+            <li class="header-item">娱乐</li>
+            <li class="header-item">体育</li>
+            <li class="header-item">图片</li>
+            <li class="header-item">财经</li>
+        </ul>
+    </div>
+    <div class="banner-content">
+        <img class="banner" src="image/img.png" alt="">
+        <p class="banner-title">2017网易时尚跨界盛典</p>
+    </div>
+    <div class="news-content">
+        <ul>
+            <li class="news-item">
+                <div class="item-inner">
+                    <img class="news-img" src="image/pig.jpg" alt="">
+                    <p class="news-title">不谈"亚太"谈"印太"特朗普访华前表态在暗示什么</p>
+                    <span class="time">1小时前</span>
+                    <span class="num">99</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="js/rem.js"></script>
+
+</html>
